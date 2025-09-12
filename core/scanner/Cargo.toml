@@ -1,0 +1,25 @@
+[package]
+name = "filemover-scanner"
+version = "0.1.0"
+edition = "2021"
+description = "Directory scanning engine for FileMover with Windows long path support"
+
+[dependencies]
+filemover-types = { path = "../types" }
+filemover-matcher = { path = "../matcher" }
+serde = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+rayon = { workspace = true }
+jwalk = { workspace = true }
+walkdir = { workspace = true }
+chrono = { workspace = true, features = ["serde"] }
+
+[target.'cfg(windows)'.dependencies]
+winapi = { workspace = true }
+windows = { workspace = true }
+
+[dev-dependencies]
+tempfile = "3.0"
+tokio-test = "0.4"

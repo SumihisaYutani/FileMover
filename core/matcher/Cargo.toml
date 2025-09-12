@@ -1,0 +1,19 @@
+[package]
+name = "filemover-matcher"
+version = "0.1.0"
+edition = "2021"
+description = "Pattern matching engine for FileMover"
+
+[dependencies]
+filemover-types = { path = "../types" }
+serde = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+globset = { workspace = true }
+regex = { workspace = true }
+aho-corasick = { workspace = true }
+unicode-normalization = { workspace = true }
+tracing = { workspace = true }
+
+[dev-dependencies]
+tokio-test = "0.4"

@@ -1,0 +1,16 @@
+[package]
+name = "filemover-types"
+version = "0.1.0"
+edition = "2021"
+description = "Core type definitions for FileMover"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+
+[target.'cfg(windows)'.dependencies]
+windows = { workspace = true }

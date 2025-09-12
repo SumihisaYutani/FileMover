@@ -1,0 +1,76 @@
+[workspace]
+resolver = "2"
+members = [
+    "core/types",
+    "core/scanner", 
+    "core/matcher",
+    "core/planner",
+    "apps/cli",
+]
+exclude = [
+    "apps/gui"
+]
+
+[workspace.dependencies]
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Async runtime
+tokio = { version = "1.0", features = ["full"] }
+
+# File system
+walkdir = "2.0"
+jwalk = "0.8"
+
+# Pattern matching
+globset = "0.4"
+regex = "1.0"
+aho-corasick = "1.0"
+
+# Unicode normalization
+unicode-normalization = "0.1"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# CLI
+clap = { version = "4.0", features = ["derive", "cargo"] }
+
+# Parallel processing
+rayon = "1.7"
+
+# UUID generation
+uuid = { version = "1.0", features = ["v4"] }
+
+# Time handling
+chrono = { version = "0.4", features = ["serde"] }
+
+# Progress indicators
+indicatif = "0.17"
+
+# Windows API
+winapi = { version = "0.3", features = [
+    "fileapi",
+    "handleapi", 
+    "winbase",
+    "winnt",
+    "errhandlingapi",
+    "shellapi",
+    "shobjidl_core",
+] }
+windows = { version = "0.51", features = [
+    "Win32_Storage_FileSystem",
+    "Win32_Foundation",
+    "Win32_System_Com",
+    "Win32_UI_Shell",
+] }
+
+[workspace.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]

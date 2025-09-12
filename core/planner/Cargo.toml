@@ -1,0 +1,18 @@
+[package]
+name = "filemover-planner"
+version = "0.1.0"
+edition = "2021"
+description = "Move plan generation and validation engine for FileMover"
+
+[dependencies]
+filemover-types = { path = "../types" }
+serde = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+uuid = { workspace = true }
+chrono = { version = "0.4", features = ["serde"] }
+
+[dev-dependencies]
+tempfile = "3.0"
+tokio-test = "0.4"

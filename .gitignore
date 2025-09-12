@@ -1,0 +1,53 @@
+# Rust
+target/
+Cargo.lock
+*.pdb
+*.so
+*.dll
+*.dylib
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Windows
+*.exe
+*.msi
+vs_buildtools.exe
+
+# Tauri build artifacts
+apps/gui/src-tauri/target/
+apps/gui/target/
+core/*/target/
+apps/cli/target/
+
+# Generated files
+*.ico
+!apps/gui/icons/icon.ico
